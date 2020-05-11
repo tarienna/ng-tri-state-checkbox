@@ -1,9 +1,17 @@
 {
   "name": "ng-tri-state-checkbox",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "An TriStateBox for Angular 9",
-  "author": "FILL IN",
+  "author": "https://github.com/tarienna/ng-tri-state-checkbox/graphs/contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarienna/ng-tri-state-checkbox"
+  },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tarienna/ng-tri-state-checkbox/issues"
+  },
+  "homepage": "https://github.com/tarienna/ng-tri-state-checkbox#readme",
   "engines": {
     "node": ">=12.10",
     "yarn": ">=1.15.2 <2.0.0"
