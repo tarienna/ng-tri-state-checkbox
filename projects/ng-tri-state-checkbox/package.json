@@ -1,0 +1,16 @@
+{
+  "name": "ng-tri-state-checkbox",
+  "version": "1.0.0",
+  "description": "An TriStateBox for Angular 9",
+  "author": "FILL IN",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.10",
+    "yarn": ">=1.15.2 <2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "~9.0.0",
+    "@angular/core": "~9.0.0",
+    "tslib": "^1.10.0"
+  }
+}

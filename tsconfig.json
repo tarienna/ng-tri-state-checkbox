@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-tri-state-checkbox": [
+        "dist/ng-tri-state-checkbox/ng-tri-state-checkbox",
+        "dist/ng-tri-state-checkbox"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
