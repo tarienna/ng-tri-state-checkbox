@@ -1,3 +1,0 @@
-# NgTriStateCheckbox
-
-TriStateBox

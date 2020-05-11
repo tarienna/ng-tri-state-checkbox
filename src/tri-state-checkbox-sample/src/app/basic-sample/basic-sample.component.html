@@ -1,0 +1,110 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Monday<br /><ng-tri-state-checkbox #monday="ngTriStateCheckbox" [(ngModel)]="dayTasks.monday"></ng-tri-state-checkbox></th>
+        <th scope="col">Tuesday<br /><ng-tri-state-checkbox #tuesday="ngTriStateCheckbox" [(ngModel)]="dayTasks.tuesday"></ng-tri-state-checkbox></th>
+        <th scope="col">Wednesday<br /><ng-tri-state-checkbox #wednesday="ngTriStateCheckbox" [(ngModel)]="dayTasks.wednesday"></ng-tri-state-checkbox></th>
+        <th scope="col">Thursday<br /><ng-tri-state-checkbox #thursday="ngTriStateCheckbox" [(ngModel)]="dayTasks.thursday"></ng-tri-state-checkbox></th>
+        <th scope="col">Friday<br /><ng-tri-state-checkbox #friday="ngTriStateCheckbox" [(ngModel)]="dayTasks.friday"></ng-tri-state-checkbox></th>
+        <th scope="col">Saturday<br /><ng-tri-state-checkbox #saturday="ngTriStateCheckbox" [(ngModel)]="dayTasks.saturday"></ng-tri-state-checkbox></th>
+        <th scope="col">Sunday<br /><ng-tri-state-checkbox #sunday="ngTriStateCheckbox" [(ngModel)]="dayTasks.sunday" checkboxClass="tri-state-checkbox-sunday"></ng-tri-state-checkbox></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let task of tasks">
+        <td>{{ task.name }}</td>
+        <td>
+            <input type="checkbox" [ngTriStateControl]="monday" [value]="task" [(ngModel)]="task.weekday.monday" [ngModelOptions]="{standalone: true}">
+        </td>
+        <td>
+            <input type="checkbox" [ngTriStateControl]="tuesday" [value]="task" [(ngModel)]="task.weekday.tuesday" [ngModelOptions]="{standalone: true}">
+        </td>
+        <td>
+            <input type="checkbox" [ngTriStateControl]="wednesday" [value]="task" [(ngModel)]="task.weekday.wednesday" [ngModelOptions]="{standalone: true}">
+        </td>
+        <td>
+            <input type="checkbox" [ngTriStateControl]="thursday" [value]="task" [(ngModel)]="task.weekday.thursday" [ngModelOptions]="{standalone: true}">
+        </td>
+        <td>
+            <input type="checkbox" [ngTriStateControl]="friday" [value]="task" [(ngModel)]="task.weekday.friday" [ngModelOptions]="{standalone: true}">
+        </td>
+        <td>
+            <input type="checkbox" [ngTriStateControl]="saturday" [value]="task" [(ngModel)]="task.weekday.saturday" [ngModelOptions]="{standalone: true}">
+        </td>
+        <td>
+            <input type="checkbox" [ngTriStateControl]="sunday" [value]="task" [(ngModel)]="task.weekday.sunday" [ngModelOptions]="{standalone: true}">
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h2 class="mt-4">Tasks per day</h2>
+<p>This sample show the NgModel output for component "ng-tri-state-checkbox".
+<br />Use value on checkbox which is declared with the ngTriStateControl to output an value"</p>
+<ul ngbNav #modelOutputNavigation="ngbNav" [activeId]="2" class="nav-tabs">
+    <li [ngbNavItem]="1">
+        <a ngbNavLink>Monday</a>
+        <ng-template ngbNavContent>
+            <p *ngIf="!dayTasks.monday || dayTasks.monday.length == 0">Currently have no tasks</p>
+            <ul>
+                <li *ngFor="let taskOnDay of dayTasks.monday">{{taskOnDay.name}}</li>
+            </ul>
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+        <a ngbNavLink>Tuesday</a>
+        <ng-template ngbNavContent>
+            <p *ngIf="!dayTasks.tuesday || dayTasks.tuesday.length == 0">Currently have no tasks</p>
+            <ul>
+                <li *ngFor="let taskOnDay of dayTasks.tuesday">{{taskOnDay.name}}</li>
+            </ul>
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="3">
+        <a ngbNavLink>Wednesday</a>
+        <ng-template ngbNavContent>
+            <p *ngIf="!dayTasks.wednesday || dayTasks.wednesday.length == 0">Currently have no tasks</p>
+            <ul>
+                <li *ngFor="let taskOnDay of dayTasks.wednesday">{{taskOnDay.name}}</li>
+            </ul>
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="4">
+        <a ngbNavLink>Thursday</a>
+        <ng-template ngbNavContent>
+            <p *ngIf="!dayTasks.thursday || dayTasks.thursday.length == 0">Currently have no tasks</p>
+            <ul>
+                <li *ngFor="let taskOnDay of dayTasks.thursday">{{taskOnDay.name}}</li>
+            </ul>
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="5">
+        <a ngbNavLink>Friday</a>
+        <ng-template ngbNavContent>
+            <p *ngIf="!dayTasks.friday || dayTasks.friday.length == 0">Currently have no tasks</p>
+            <ul>
+                <li *ngFor="let taskOnDay of dayTasks.friday">{{taskOnDay.name}}</li>
+            </ul>
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="6">
+        <a ngbNavLink>Saturday</a>
+        <ng-template ngbNavContent>
+            <p *ngIf="!dayTasks.saturday || dayTasks.saturday.length == 0">Currently have no tasks</p>
+            <ul>
+                <li *ngFor="let taskOnDay of dayTasks.saturday">{{taskOnDay.name}}</li>
+            </ul>
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="7">
+        <a ngbNavLink>Sunday</a>
+        <ng-template ngbNavContent>
+            <p *ngIf="!dayTasks.sunday || dayTasks.sunday.length == 0">Currently have no tasks</p>
+            <ul>
+                <li *ngFor="let taskOnDay of dayTasks.sunday">{{taskOnDay.name}}</li>
+            </ul>
+        </ng-template>
+    </li>
+</ul>
+
+<div [ngbNavOutlet]="modelOutputNavigation" class="mt-2"></div>

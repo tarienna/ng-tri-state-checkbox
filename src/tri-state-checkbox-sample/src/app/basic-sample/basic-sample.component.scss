@@ -1,17 +1,35 @@
-$tri-state-checkbox-size: 1rem !default;
-$tri-state-checkbox-all-checked: #ffffff !default;
-$tri-state-checkbox-all-checked-background: #0099da !default;
-$tri-state-checkbox-some-checked: #adb5bd !default;
-$tri-state-checkbox-some-checked-background: #ffffff !default;
-$tri-state-checkbox-some-checked-inner-size: 0.55rem !default;
-$tri-state-checkbox-some-checked-inner-top: #{($tri-state-checkbox-size - $tri-state-checkbox-some-checked-inner-size) / 2} !default;
-$tri-state-checkbox-some-checked-inner-left: #{($tri-state-checkbox-size - $tri-state-checkbox-some-checked-inner-size) / 2} !default;
-$tri-state-checkbox-some-checked-inner-color: #0099da !default;
-$tri-state-checkbox-background: #ffffff !default;
-$tri-state-checkbox-border-color: #adb5bd !default;
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/variables';
 
-.tri-state-checkbox-container {
-    .tri-state-checkbox-default {
+table {
+    tr th,
+    tr td {
+        text-align: center;
+        vertical-align: middle;
+
+        ng-tri-state-checkbox {
+            display: inline-block;
+            align-content: center;
+            margin-top: 5px;
+        }
+    }
+}
+
+::ng-deep {
+    $tri-state-checkbox-size: 1rem !default;
+    $tri-state-checkbox-all-checked: #ffffff !default;
+    $tri-state-checkbox-all-checked-background: $red !default;
+    $tri-state-checkbox-some-checked: #adb5bd !default;
+    $tri-state-checkbox-some-checked-background: #ffffff !default;
+    $tri-state-checkbox-some-checked-inner-size: 0.55rem !default;
+    $tri-state-checkbox-some-checked-inner-top: #{($tri-state-checkbox-size - $tri-state-checkbox-some-checked-inner-size) / 2} !default;
+    $tri-state-checkbox-some-checked-inner-left: #{($tri-state-checkbox-size - $tri-state-checkbox-some-checked-inner-size) / 2} !default;
+    $tri-state-checkbox-some-checked-inner-color: $red !default;
+    $tri-state-checkbox-background: #ffffff !default;
+    $tri-state-checkbox-border-color: #adb5bd !default;
+
+    .tri-state-checkbox-sunday {
         height: $tri-state-checkbox-size;
         width: $tri-state-checkbox-size;
         display: block;
@@ -29,6 +47,7 @@ $tri-state-checkbox-border-color: #adb5bd !default;
         &:checked:not(:indeterminate) {
             background-color: $tri-state-checkbox-all-checked-background;
             color: $tri-state-checkbox-all-checked;
+
             &:after {
                 content: '';
                 display: block;
@@ -53,6 +72,7 @@ $tri-state-checkbox-border-color: #adb5bd !default;
             background-color: $tri-state-checkbox-some-checked-background;
             color: $tri-state-checkbox-some-checked;
             border-color: $tri-state-checkbox-some-checked-inner-color;
+
             &:after {
                 content: '';
                 display: block;
