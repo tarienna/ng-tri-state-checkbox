@@ -3,6 +3,17 @@
   "version": "0.0.1",
   "description": "An TriStateBox for Angular 9",
   "author": "https://github.com/tarienna/ng-tri-state-checkbox/graphs/contributors",
+  "keywords": [
+    "angular",
+    "angular9",
+    "tri",
+    "three",
+    "state",
+    "checkboxes",
+    "tri state checkboxes",
+    "three state checkboxes",
+    "ng"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tarienna/ng-tri-state-checkbox"
