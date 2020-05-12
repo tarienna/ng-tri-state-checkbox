@@ -3,7 +3,7 @@ This is a three state checkbox for angular 9. Which is easy to implement and to 
 
 It can be used to select some entries from a list and control it. The user can select / unselect all entries by one click.
 
-![Sample Image 1](../../readme-assets/sample-image.png)
+![Sample Image 1](https://github.com/tarienna/ng-tri-state-checkbox/blob/master/readme-assets/sample-image.png)
 
 ## Installation
 It can be installed with npm or yarn
@@ -37,17 +37,57 @@ export class AppModule { }
 
 ## Usage
 For a more complex implementation see the [Sample application](#sample-application) section in this documentation.
+First create the tree state checkbox:
+```html
+<ng-tri-state-checkbox [(ngModel)]="checkedCountries" #myTriStateBox="ngTriStateCheckbox"></ng-tri-state-checkbox>
+```
+
+Now create the controllers with values:
+```html
+<input type="checkbox" [ngTriStateControl]="myTriStateBox" [value]="{country: 'USA'}" [(ngModel)]="usaIsChecked">
+<input type="checkbox" [ngTriStateControl]="myTriStateBox" [value]="{country: 'Germany'}" [(ngModel)]="germanyIsChecked">
+<input type="checkbox" [ngTriStateControl]="myTriStateBox" [value]="{country: 'Great Britain'}" [(ngModel)]="greatBritainIsChecked">
+...
+```
 
 ### API
 #### NgTriStateCheckboxComponent
+**Typ:** Component<br />
+**Tag:** ng-tri-state-checkbox<br />
+**Export as:** ngTriStateCheckbox
+
+This component is the three (tri) state control. It will control the ngTriStateControl's and output their values.
+
+##### ngModel
+**Typ:** Template Tag <br />
+**Input:** will be ignored at the moment<br />
+**Output:** An array of values from the checked ngTriStateControl checkboxes.
+
+##### checkboxClass
+**Typ:** Template Tag <br />
+**Input:** Checkbox class to use a custom theme
+
 #### NgTriStateControlDirective
+**Typ:** Directive<br />
+**Tag:** ngTriStateControl<br />
+**Supported HTML Tags:** input[type="checkbox"] <br/>
+**Export as:** ngTriStateControl <br />
+**Input**: ngTriStateCheckbox <br />
+**Required tags:** value <br />
+
+When it is checked, it will add his value (from the tag "value") to the connected ngTriStateCheckbox.
+
+##### value
+**Typ:** Template Tag <br />
+**Input:** The value, when checked, for the ngTriStateCheckbox
+
 
 ## Custom styles
-See the example style in: [src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.scss](https://github.com/src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.scss).
-And the usage on the sunday [src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.html](https://github.com/src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.html) checkbox.
+See the example style in: [src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.scss](https://github.com/tarienna/ng-tri-state-checkbox/tree/master/src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.scss).
+And the usage on the sunday [src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.html](https://github.com/tarienna/ng-tri-state-checkbox/tree/master/src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.html) checkbox.
 
 To replace the default style for the component simply use the tag "checkboxClass" and set the class.
-```angular2html
+```html
 <th scope="col">Sunday<br /><ng-tri-state-checkbox ... checkboxClass="tri-state-checkbox-sunday"></ng-tri-state-checkbox></th>
 ```
 
