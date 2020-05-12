@@ -84,7 +84,7 @@ When it is checked, it will add it's value (from the tag "value") to the connect
 
 ## Custom styles
 See the example style in: [src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.scss](https://github.com/tarienna/ng-tri-state-checkbox/tree/master/src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.scss).
-And the usage in: [src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.html](https://github.com/tarienna/ng-tri-state-checkbox/tree/master/src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.html) checkbox.
+And the usage in the sunday [src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.html](https://github.com/tarienna/ng-tri-state-checkbox/tree/master/src/tri-state-checkbox-sample/src/app/basic-sample/basic-sample.component.html) checkbox.
 
 To replace the default style for the component simply use the "checkboxClass" tag and set your css class.
 ```html
