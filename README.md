@@ -3,7 +3,7 @@ This is a three state checkbox for angular 9, which is easy to use and implement
 
 It can be used to select some entries from a list and control those entries. The user can select / unselect all entries by one click.
 
-![Sample Image 1](https://github.com/tarienna/ng-tri-state-checkbox/blob/master/readme-assets/sample-image.png)
+![Sample Image 1](https://github.com/tarienna/ng-tri-state-checkbox/blob/master/readme-assets/ngTriStateCheckbox.gif)
 
 ## Installation
 It can be installed with npm or yarn
@@ -94,6 +94,7 @@ To replace the default style for the component simply use the "checkboxClass" ta
 ## Sample application
 The sample application's sourcecode can be found at: [src/tri-state-checkbox-sample/](https://github.com/tarienna/ng-tri-state-checkbox/tree/master/src/tri-state-checkbox-sample/).
 
+![Sample Image 1](https://github.com/tarienna/ng-tri-state-checkbox/blob/master/readme-assets/sample-image.png)
 
 ### Before you start 
 To run the sample application, you need to download the source code.
