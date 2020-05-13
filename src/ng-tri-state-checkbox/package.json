@@ -1,7 +1,7 @@
 {
   "name": "ng-tri-state-checkbox",
-  "version": "0.0.1",
-  "description": "An TriStateBox for Angular 9",
+  "version": "1.0.0",
+  "description": "A TriStateCheckbox for Angular 9",
   "author": "https://github.com/tarienna/ng-tri-state-checkbox/graphs/contributors",
   "keywords": [
     "angular",
@@ -31,5 +31,6 @@
     "@angular/common": "~9.0.0",
     "@angular/core": "~9.0.0",
     "tslib": "^1.10.0"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
