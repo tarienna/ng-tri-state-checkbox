@@ -75,11 +75,11 @@ This component is the three (tri) state control. It will handle the ngTriStateCo
 **Input**: ngTriStateCheckbox <br />
 **Required tags:** value <br />
 
-When it is checked, it will add it's value (from the tag "value") to the connected ngTriStateCheckbox.
+The value of this checkbox will only be added to the ngModel output of the connected "ngTriStateCheckbox", when this checkbox is checked.
 
 ##### value
 **Typ:** Template Tag <br />
-**Input:** The ngTriStateCheckbox's value, when checked
+**Input:** The value of the connected ngTriStateCheckbox.
 
 
 ## Custom styles
@@ -96,7 +96,7 @@ The sample application's sourcecode can be found at: [src/tri-state-checkbox-sam
 
 
 ### Before you start 
-To run the sample application you need to download the source code.
+To run the sample application, you need to download the source code.
 
 #### Download the source code
 You can download the source code using [git](#download-the-source-code-with-git) or as a [zip](#download-the-source-code-as-zip). Descriptions are below.
@@ -109,13 +109,13 @@ git clone https://github.com/tarienna/ng-tri-state-checkbox.git
 There is also the possibility to download the project as zip: [Click here to download](https://github.com/tarienna/ng-tri-state-checkbox/archive/master.zip). After downloading you have to unzip the package.
 
 #### Install the node packages
-In the project's root directory simply type at the commandline:
+To install all dependencies execute the following command:
 ```bash
 npm install
 ```
 
 #### Start the Application
-To run the application go to the application's root directoryand type at the following command:
+To run the sample application execute the following command:
 ```bash
 npm run start:example
 ```
