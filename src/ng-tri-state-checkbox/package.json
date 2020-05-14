@@ -1,5 +1,5 @@
 {
-  "name": "ng-tri-state-checkbox",
+  "name": "@tarriena/ng-tri-state-checkbox",
   "version": "1.0.0",
   "description": "A TriStateCheckbox for Angular 9",
   "author": "https://github.com/tarienna/ng-tri-state-checkbox/graphs/contributors",
@@ -16,7 +16,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tarienna/ng-tri-state-checkbox"
+    "url": "git+https://github.com/tarienna/ng-tri-state-checkbox",
+    "directory": "src/ng-tri-state-checkbox"
   },
   "license": "MIT",
   "bugs": {
@@ -31,6 +32,5 @@
     "@angular/common": "~9.0.0",
     "@angular/core": "~9.0.0",
     "tslib": "^1.10.0"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  }
 }
