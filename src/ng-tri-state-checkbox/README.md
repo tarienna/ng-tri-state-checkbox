@@ -8,11 +8,11 @@ It can be used to select some entries from a list and control those entries. The
 ## Installation
 It can be installed with npm or yarn
 ```bash
-npm install ng-tri-state-checkbox --save
+npm install @tarienna/ng-tri-state-checkbox --save
 ```
 or:
 ```bash
-yarn install ng-tri-state-checkbox
+yarn install @tarienna/ng-tri-state-checkbox
 ```
 
 ### Add NgTriStateCheckboxModule to your module
